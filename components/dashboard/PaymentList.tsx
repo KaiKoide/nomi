@@ -2,9 +2,7 @@ import { Clapperboard } from "lucide-react";
 
 import {
   Item,
-  ItemActions,
   ItemContent,
-  ItemDescription,
   ItemFooter,
   ItemHeader,
   ItemMedia,
