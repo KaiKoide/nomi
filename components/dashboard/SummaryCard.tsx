@@ -8,7 +8,7 @@ import {
 
 export const SummaryCard = () => {
   return (
-    <Card className="bg-linear-to-br from-theme-dark to-theme-pink">
+    <Card className="bg-linear-to-br from-theme-dark to-theme-pink m-5">
       <CardHeader>
         <CardTitle>合計金額</CardTitle>
         <CardTitle className="text-4xl">￥12,800</CardTitle>

@@ -24,8 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className="h-screen">
+      <body
+        className={`${roboto.variable} ${geistMono.variable} antialiased h-full`}
+      >
         {children}
       </body>
     </html>
