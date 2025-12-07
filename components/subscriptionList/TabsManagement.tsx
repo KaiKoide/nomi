@@ -7,7 +7,7 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item";
-import { Clapperboard } from "lucide-react";
+import { Clapperboard, Utensils, BriefcaseBusiness } from "lucide-react";
 
 export const TabsManagement = () => {
   return (
@@ -35,7 +35,7 @@ export const TabsManagement = () => {
             </Item>
             <Item className="bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
               <ItemMedia variant="icon" className="row-span-2">
-                <Clapperboard />
+                <Utensils />
               </ItemMedia>
               <ItemContent className="col-span-2 row-span-2">
                 <ItemHeader className="text-lg font-bold">nosh</ItemHeader>
@@ -47,7 +47,7 @@ export const TabsManagement = () => {
             </Item>
             <Item className="bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
               <ItemMedia variant="icon" className="row-span-2">
-                <Clapperboard />
+                <BriefcaseBusiness />
               </ItemMedia>
               <ItemContent className="col-span-2 row-span-2">
                 <ItemHeader className="text-lg font-bold">ChatGPT</ItemHeader>
@@ -75,7 +75,7 @@ export const TabsManagement = () => {
           <TabsContent value="business">
             <Item className="bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
               <ItemMedia variant="icon" className="row-span-2">
-                <Clapperboard />
+                <BriefcaseBusiness />
               </ItemMedia>
               <ItemContent className="col-span-2 row-span-2">
                 <ItemHeader className="text-lg font-bold">ChatGPT</ItemHeader>
@@ -89,7 +89,7 @@ export const TabsManagement = () => {
           <TabsContent value="life">
             <Item className="m-2 gap-3 bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
               <ItemMedia variant="icon" className="row-span-2">
-                <Clapperboard />
+                <Utensils />
               </ItemMedia>
               <ItemContent className="col-span-2 row-span-2">
                 <ItemHeader className="text-lg font-bold">nosh</ItemHeader>

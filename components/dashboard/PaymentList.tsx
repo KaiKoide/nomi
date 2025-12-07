@@ -1,6 +1,11 @@
 "use client";
 
-import { ChevronRight, Clapperboard } from "lucide-react";
+import {
+  ChevronRight,
+  Clapperboard,
+  Utensils,
+  BriefcaseBusiness,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import {
@@ -42,7 +47,7 @@ export const PaymentList = () => {
       </Item>
       <Item className="bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
         <ItemMedia variant="icon" className="row-span-2">
-          <Clapperboard />
+          <Utensils />
         </ItemMedia>
         <ItemContent className="col-span-2 row-span-2">
           <ItemHeader className="text-lg font-bold">nosh</ItemHeader>
@@ -54,7 +59,7 @@ export const PaymentList = () => {
       </Item>
       <Item className="bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
         <ItemMedia variant="icon" className="row-span-2">
-          <Clapperboard />
+          <BriefcaseBusiness />
         </ItemMedia>
         <ItemContent className="col-span-2 row-span-2">
           <ItemHeader className="text-lg font-bold">ChatGPT</ItemHeader>
