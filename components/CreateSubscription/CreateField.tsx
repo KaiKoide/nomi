@@ -1,3 +1,4 @@
+"use client";
 import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import {
@@ -10,8 +11,19 @@ import {
 import { DatePicker } from "@/components/ui/datePicker";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { SubscriptionIconPicker } from "@/components/ui/subscriptionIconPicker";
+import { useState } from "react";
+import { SubscriptionIconName } from "@/lib/icons";
 
 export const CreateField = () => {
+  const [selectedIcon, setSelectedIcon] = useState<
+    SubscriptionIconName | undefined
+  >(undefined);
+
+  const handleIconSelect = (iconName: SubscriptionIconName) => {
+    setSelectedIcon(iconName);
+  };
+
   return (
     <FieldSet className="w-full p-3">
       <FieldGroup>
@@ -55,6 +67,13 @@ export const CreateField = () => {
               <SelectItem value="other">その他</SelectItem>
             </SelectContent>
           </Select>
+        </Field>
+        <Field>
+          <FieldLabel htmlFor="name">アイコン</FieldLabel>
+          <SubscriptionIconPicker
+            selectedIcon={selectedIcon}
+            onIconSelect={handleIconSelect}
+          />
         </Field>
         <Field>
           <FieldLabel htmlFor="memo">メモ</FieldLabel>
