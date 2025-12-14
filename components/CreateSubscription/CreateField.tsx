@@ -77,11 +77,7 @@ export const CreateField = () => {
         </Field>
         <Field>
           <FieldLabel htmlFor="memo">メモ</FieldLabel>
-          <Textarea
-            id="memo"
-            placeholder="Your feedback helps us improve..."
-            rows={4}
-          />
+          <Textarea id="memo" placeholder="メモを入力してください" rows={4} />
         </Field>
         <Field>
           <Button type="submit" className="bg-theme-pink font-bold text-xl">
