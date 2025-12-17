@@ -1,3 +1,13 @@
+"use client";
+
+import {
+  Clapperboard,
+  Utensils,
+  BriefcaseBusiness,
+  ListPlus,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Item,
@@ -7,9 +17,14 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item";
-import { Clapperboard, Utensils, BriefcaseBusiness } from "lucide-react";
-
+import { Button } from "@/components/ui/button";
 export const TabsManagement = () => {
+  const router = useRouter();
+
+  const handleCategoryManagement = () => {
+    return router.push("/categoryList");
+  };
+
   return (
     <div className="flex-1 flex flex-col justify-between w-full">
       <div>
@@ -19,6 +34,12 @@ export const TabsManagement = () => {
             <TabsTrigger value="entertainment">エンタメ</TabsTrigger>
             <TabsTrigger value="business">仕事</TabsTrigger>
             <TabsTrigger value="life">生活</TabsTrigger>
+            <Button
+              onClick={handleCategoryManagement}
+              className="rounded-full w-10 h-10 bg-theme-light-pink mb-3 mx-2"
+            >
+              <ListPlus className="size-5 text-theme-dark" />
+            </Button>
           </TabsList>
           <TabsContent value="all">
             <Item className="bg-white/10 backdrop-blur-sm grid grid-cols-4 grid-rows-2">
@@ -26,7 +47,7 @@ export const TabsManagement = () => {
                 <Clapperboard />
               </ItemMedia>
               <ItemContent className="col-span-2 row-span-2">
-                <ItemHeader className="text-lg font-bold">Netfilx</ItemHeader>
+                <ItemHeader className="text-lg font-bold">Netflix</ItemHeader>
                 <ItemTitle>次回支払日：2025/12/01</ItemTitle>
               </ItemContent>
               <ItemFooter className="row-span-2 text-xl font-bold">
@@ -64,7 +85,7 @@ export const TabsManagement = () => {
                 <Clapperboard />
               </ItemMedia>
               <ItemContent className="col-span-2 row-span-2">
-                <ItemHeader className="text-lg font-bold">Netfilx</ItemHeader>
+                <ItemHeader className="text-lg font-bold">Netflix</ItemHeader>
                 <ItemTitle>次回支払日：2025/12/01</ItemTitle>
               </ItemContent>
               <ItemFooter className="row-span-2 text-xl font-bold">

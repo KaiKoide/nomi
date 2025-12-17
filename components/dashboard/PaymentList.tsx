@@ -38,7 +38,7 @@ export const PaymentList = () => {
           <Clapperboard />
         </ItemMedia>
         <ItemContent className="col-span-2 row-span-2">
-          <ItemHeader className="text-lg font-bold">Netfilx</ItemHeader>
+          <ItemHeader className="text-lg font-bold">Netflix</ItemHeader>
           <ItemTitle>次回支払日：2025/12/01</ItemTitle>
         </ItemContent>
         <ItemFooter className="row-span-2 text-xl font-bold">

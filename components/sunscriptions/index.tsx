@@ -11,7 +11,7 @@ export const Subscriptions = () => {
           <ItemMedia variant="icon" className="row-span-2">
             <Clapperboard />
           </ItemMedia>
-          <p>Netfilx</p>
+          <p>Netflix</p>
         </div>
       </div>
     </div>

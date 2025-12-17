@@ -29,7 +29,7 @@ export const CreateField = () => {
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="name">サービス名</FieldLabel>
-          <Input id="name" autoComplete="off" placeholder="Netfilx" />
+          <Input id="name" autoComplete="off" placeholder="Netflix" />
         </Field>
         <Field>
           <FieldLabel htmlFor="username">金額</FieldLabel>
