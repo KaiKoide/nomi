@@ -1,10 +1,8 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 import { Item, ItemContent, ItemHeader } from "@/components/ui/item";
-import { AddButton } from "@/components/ui/addButton";
 import { DrawerComponent } from "./drawerComponent";
 
 export const Categories = () => {
@@ -30,7 +28,7 @@ export const Categories = () => {
         </ItemContent>
         <ChevronRight className="text-theme-pink" />
       </Item>
-      <DrawerComponent />
+      <DrawerComponent mode="add" />
     </div>
   );
 };

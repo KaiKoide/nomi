@@ -15,7 +15,13 @@ import { Field, FieldGroup, FieldLabel } from "../ui/field";
 import { FieldSet } from "../ui/field";
 import { Input } from "../ui/input";
 
-export const DrawerComponent = () => {
+type DrawerComponentProps = {
+  mode: "add" | "edit";
+};
+
+export const DrawerComponent = ({ mode }: DrawerComponentProps) => {
+  const title = mode === "edit" ? "カテゴリを編集" : "カテゴリを追加";
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -23,9 +29,7 @@ export const DrawerComponent = () => {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle className="text-xl font-bold">
-            カテゴリを追加
-          </DrawerTitle>
+          <DrawerTitle className="text-xl font-bold">{title}</DrawerTitle>
         </DrawerHeader>
         <FieldSet className="w-full p-3">
           <FieldGroup>
@@ -42,7 +46,21 @@ export const DrawerComponent = () => {
         <DrawerFooter>
           <Button>Save</Button>
           <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            {mode === "edit" ? (
+              <div className="flex gap-2 w-full">
+                <Button
+                  variant="outline"
+                  className="flex-1 border-theme-pink text-theme-pink bg-theme-pink/20"
+                >
+                  Delete
+                </Button>
+                <Button variant="outline" className="flex-1">
+                  Cancel
+                </Button>
+              </div>
+            ) : (
+              <Button variant="outline">Cancel</Button>
+            )}
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
