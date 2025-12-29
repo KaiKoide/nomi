@@ -11,10 +11,6 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "stylelint.validate": ["css", "scss"],
-  "stylelint.enable": true,
-  "stylelint.configFile": ".stylelintrc.json",
-  "stylelint.packageManager": "npm",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "path-intellisense.mappings": {
