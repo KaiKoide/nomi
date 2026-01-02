@@ -1,6 +1,7 @@
-import { Header } from "@/components/ui/header";
-import { ItemMedia } from "../ui/item";
 import { Clapperboard } from "lucide-react";
+
+import { Header } from "@/components/ui/header";
+import { ItemMedia } from "@/components/ui/item";
 
 export const Subscriptions = () => {
   return (
