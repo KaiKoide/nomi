@@ -14,11 +14,22 @@ import { Button } from "@/components/ui/button";
 import { SubscriptionIconPicker } from "@/components/ui/subscriptionIconPicker";
 import { useState } from "react";
 import { SubscriptionIconName } from "@/lib/icons";
+import { Subscription } from "@/lib/type";
 
-export const CreateField = () => {
+type SubscriptionFieldProps = {
+  subscription?: Subscription;
+};
+
+export const SubscriptionField = ({ subscription }: SubscriptionFieldProps) => {
   const [selectedIcon, setSelectedIcon] = useState<
     SubscriptionIconName | undefined
-  >(undefined);
+  >(subscription?.icon as SubscriptionIconName | undefined);
+  const [name, setName] = useState(subscription?.name);
+  const [price, setPrice] = useState(subscription?.price);
+  const [cycle, setCycle] = useState(subscription?.cycle);
+  const [nextPaymentDate] = useState(subscription?.nextPaymentDate);
+  const [category, setCategory] = useState(subscription?.category);
+  const [memo, setMemo] = useState(subscription?.memo);
 
   const handleIconSelect = (iconName: SubscriptionIconName) => {
     setSelectedIcon(iconName);
@@ -29,15 +40,27 @@ export const CreateField = () => {
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="name">サービス名</FieldLabel>
-          <Input id="name" autoComplete="off" placeholder="Netflix" />
+          <Input
+            id="name"
+            autoComplete="off"
+            placeholder="Netflix"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </Field>
         <Field>
           <FieldLabel htmlFor="username">金額</FieldLabel>
-          <Input id="username" autoComplete="off" placeholder="1,000" />
+          <Input
+            id="username"
+            autoComplete="off"
+            placeholder="1,000"
+            value={price}
+            onChange={(e) => setPrice(Number(e.target.value))}
+          />
         </Field>
         <Field>
           <FieldLabel>支払サイクル</FieldLabel>
-          <Select>
+          <Select value={cycle} onValueChange={setCycle}>
             <SelectTrigger>
               <SelectValue placeholder="月額" />
             </SelectTrigger>
@@ -52,11 +75,11 @@ export const CreateField = () => {
         </Field>
         <Field>
           <FieldLabel htmlFor="username">次の支払日</FieldLabel>
-          <DatePicker />
+          <DatePicker nextPaymentDate={nextPaymentDate} />
         </Field>
         <Field>
           <FieldLabel>カテゴリ</FieldLabel>
-          <Select>
+          <Select value={category} onValueChange={setCategory}>
             <SelectTrigger>
               <SelectValue placeholder="エンタメ" />
             </SelectTrigger>
@@ -77,11 +100,17 @@ export const CreateField = () => {
         </Field>
         <Field>
           <FieldLabel htmlFor="memo">メモ</FieldLabel>
-          <Textarea id="memo" placeholder="メモを入力してください" rows={4} />
+          <Textarea
+            id="memo"
+            placeholder="メモを入力してください"
+            rows={4}
+            value={memo}
+            onChange={(e) => setMemo(e.target.value)}
+          />
         </Field>
         <Field>
           <Button type="submit" className="bg-theme-pink font-bold text-xl">
-            登録
+            Save
           </Button>
         </Field>
       </FieldGroup>

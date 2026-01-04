@@ -1,11 +1,11 @@
 import { Header } from "@/components/ui/header";
-import { CreateField } from "@/components/CreateSubscription/CreateField";
+import { SubscriptionField } from "@/components/createSubscription/CreateField";
 
 export const CreateSubscriptionComponent = () => {
   return (
     <div>
       <Header title="新しいサブスクリプション" />
-      <CreateField />
+      <SubscriptionField />
     </div>
   );
 };
