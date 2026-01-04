@@ -1,25 +1,11 @@
 "use client";
 
-import {
-  Clapperboard,
-  Utensils,
-  BriefcaseBusiness,
-  ListPlus,
-} from "lucide-react";
+import { ListPlus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Item,
-  ItemContent,
-  ItemFooter,
-  ItemHeader,
-  ItemMedia,
-  ItemTitle,
-} from "@/components/ui/item";
 import { Button } from "@/components/ui/button";
 import { Subscription } from "@/lib/type";
-import { subscriptionIcons } from "@/lib/icons";
 import { SubscriptionList } from "@/components/subscriptionList/SubscriptionList";
 import { getFilteredSubscriptions, getTotalPrice } from "@/lib/subscription";
 import { useState } from "react";

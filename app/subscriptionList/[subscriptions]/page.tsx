@@ -1,4 +1,4 @@
-import { Subscriptions } from "@/components/sunscriptions";
+import { Subscriptions } from "@/components/subscriptions";
 
 export default function SubscriptionDetails() {
   return <Subscriptions />;
