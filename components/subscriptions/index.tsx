@@ -9,7 +9,7 @@ export const Subscriptions = ({
 }) => {
   return (
     <div className="flex flex-col items-center h-full w-full">
-      <Header title="サブスクリプション詳細" />
+      <Header title="サブスクリプション詳細" isEdit={true} />
       <DetailComponent subscription={subscription} />
     </div>
   );

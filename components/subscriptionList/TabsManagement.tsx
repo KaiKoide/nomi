@@ -1,10 +1,8 @@
 "use client";
 
-import { ListPlus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 import { Subscription } from "@/lib/type";
 import { SubscriptionList } from "@/components/subscriptionList/SubscriptionList";
 import { getFilteredSubscriptions, getTotalPrice } from "@/lib/subscription";
@@ -15,12 +13,7 @@ export const TabsManagement = ({
 }: {
   subscriptionList: Subscription[];
 }) => {
-  const router = useRouter();
   const [activeTab, setActiveTab] = useState("all");
-
-  const handleCategoryManagement = () => {
-    return router.push("/categoryList");
-  };
 
   return (
     <div className="flex-1 flex flex-col justify-between w-full">
@@ -35,12 +28,6 @@ export const TabsManagement = ({
             <TabsTrigger value="entertainment">エンタメ</TabsTrigger>
             <TabsTrigger value="business">仕事</TabsTrigger>
             <TabsTrigger value="life">生活</TabsTrigger>
-            <Button
-              onClick={handleCategoryManagement}
-              className="rounded-full w-10 h-10 bg-theme-light-pink mb-3 mx-2"
-            >
-              <ListPlus className="size-5 text-theme-dark" />
-            </Button>
           </TabsList>
           <TabsContent value="all">
             <SubscriptionList
