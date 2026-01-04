@@ -12,9 +12,15 @@ import {
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
-export function DatePicker() {
+export function DatePicker({
+  nextPaymentDate,
+}: {
+  nextPaymentDate: string | undefined;
+}) {
   const [open, setOpen] = React.useState(false);
-  const [date, setDate] = React.useState<Date | undefined>(undefined);
+  const [date, setDate] = React.useState<Date | undefined>(
+    nextPaymentDate ? new Date(nextPaymentDate) : undefined
+  );
 
   const formattedDate = (date: Date) => {
     const year = date.getFullYear();
@@ -38,7 +44,7 @@ export function DatePicker() {
             variant="outline"
             id="date"
             className={cn(
-              "w-full justify-between",
+              "w-full justify-between text-lg h-11",
               date ? "text-white" : "text-muted-foreground"
             )}
           >

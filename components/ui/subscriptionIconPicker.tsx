@@ -12,7 +12,7 @@ export const SubscriptionIconPicker = ({
   onIconSelect,
 }: subscriptionIconPickerProps) => {
   return (
-    <div className="p-2 bg-theme-light-pink/95 backdrop-blur-lg rounded-md flex flex-wrap gap-2 justify-center">
+    <div className="p-2 bg-theme-light-pink/95 backdrop-blur-lg rounded-md flex flex-wrap gap-2 ">
       {Object.entries(subscriptionIcons).map(([name, icon]) => {
         return (
           <Button
