@@ -1,4 +1,4 @@
-import { Subscription } from "./type";
+import { Subscription } from './type';
 
 /**
  * カテゴリでサブスクリプションリストをフィルタリングする
@@ -10,7 +10,7 @@ export const getFilteredSubscriptions = (
   subscriptions: Subscription[],
   category: string
 ): Subscription[] => {
-  if (category === "all") {
+  if (category === 'all') {
     return subscriptions;
   }
   return subscriptions.filter(
@@ -23,7 +23,9 @@ export const getFilteredSubscriptions = (
  * @param subscriptions サブスクリプションの配列
  * @returns 合計金額
  */
-export const getTotalPrice = (subscriptions: Subscription[]): number => {
+export const getTotalPrice = (
+  subscriptions: Subscription[]
+): number => {
   return subscriptions.reduce(
     (acc, subscription) => acc + subscription.price,
     0

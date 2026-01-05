@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import { Header } from "@/components/ui/header";
-import { DetailComponent } from "@/components/subscriptions/Detail";
-import { Subscription } from "@/lib/type";
+import { useRouter } from 'next/navigation';
+import { Header } from '@/components/ui/header';
+import { DetailComponent } from '@/components/subscriptions/Detail';
+import { Subscription } from '@/lib/type';
 
 export const Subscriptions = ({
   subscription,
@@ -13,12 +13,14 @@ export const Subscriptions = ({
   const router = useRouter();
 
   const handleSubscriptionEdit = () => {
-    return router.push(`/subscriptionList/${subscription.id}/edit`);
+    return router.push(
+      `/subscriptionList/${subscription.id}/edit`
+    );
   };
   return (
-    <div className="flex flex-col items-center h-full w-full">
+    <div className='flex flex-col items-center h-full w-full'>
       <Header
-        title="サブスクリプション詳細"
+        title='サブスクリプション詳細'
         isEdit={true}
         onEdit={handleSubscriptionEdit}
       />

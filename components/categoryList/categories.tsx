@@ -1,29 +1,33 @@
-"use client";
+'use client';
 
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from 'lucide-react';
 
-import { Item, ItemContent, ItemHeader } from "@/components/ui/item";
-import { DrawerComponent } from "./drawerComponent";
+import {
+  Item,
+  ItemContent,
+  ItemHeader,
+} from '@/components/ui/item';
+import { DrawerComponent } from './drawerComponent';
 
 export const Categories = () => {
   const categories = [
-    { id: 1, name: "エンタメ" },
-    { id: 2, name: "仕事" },
-    { id: 3, name: "生活" },
+    { id: 1, name: 'エンタメ' },
+    { id: 2, name: '仕事' },
+    { id: 3, name: '生活' },
   ];
 
   const handleSave = (name: string, id?: number) => {
     if (id) {
       // 編集
-      console.log("編集", name, id);
+      console.log('編集', name, id);
     } else {
       // 追加
-      console.log("追加", name);
+      console.log('追加', name);
     }
   };
 
   const handleDelete = (id: number) => {
-    console.log("削除", id);
+    console.log('削除', id);
   };
 
   return (
@@ -31,7 +35,7 @@ export const Categories = () => {
       {categories.map((category) => (
         <DrawerComponent
           key={category.id}
-          mode="edit"
+          mode='edit'
           categoryId={category.id}
           categoryName={category.name}
           onSave={handleSave}
@@ -39,20 +43,20 @@ export const Categories = () => {
           editTrigger={
             <Item
               key={category.id}
-              className="bg-white/10 backdrop-blur-sm flex justify-between items-center border border-theme-pink"
+              className='bg-white/10 backdrop-blur-sm flex justify-between items-center border border-theme-pink'
             >
-              <ItemContent className="col-span-2 row-span-2">
-                <ItemHeader className="row-span-2 text-xl font-bold">
+              <ItemContent className='col-span-2 row-span-2'>
+                <ItemHeader className='row-span-2 text-xl font-bold'>
                   {category.name}
                 </ItemHeader>
               </ItemContent>
-              <ChevronRight className="text-theme-pink" />
+              <ChevronRight className='text-theme-pink' />
             </Item>
           }
         />
       ))}
 
-      <DrawerComponent mode="add" />
+      <DrawerComponent mode='add' />
     </div>
   );
 };

@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { CalendarDays } from "lucide-react";
+import * as React from 'react';
+import { CalendarDays } from 'lucide-react';
 
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/popover';
+import { cn } from '@/lib/utils';
 
 export function DatePicker({
   nextPaymentDate,
@@ -24,7 +24,10 @@ export function DatePicker({
 
   const formattedDate = (date: Date) => {
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(
+      2,
+      '0'
+    );
     const day = date.getDate();
 
     return `${year}/${month}/${day}`;
@@ -37,28 +40,31 @@ export function DatePicker({
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className='flex flex-col gap-3'>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
-            id="date"
+            variant='outline'
+            id='date'
             className={cn(
-              "w-full justify-between text-lg h-11",
-              date ? "text-white" : "text-muted-foreground"
+              'w-full justify-between text-lg h-11',
+              date ? 'text-white' : 'text-muted-foreground'
             )}
           >
             {date
               ? formattedDate(date)
               : formattedDate(new Date(getNextMonth()))}
-            <CalendarDays className="text-white" />
+            <CalendarDays className='text-white' />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto overflow-hidden p-0" align="start">
+        <PopoverContent
+          className='w-auto overflow-hidden p-0'
+          align='start'
+        >
           <Calendar
-            mode="single"
+            mode='single'
             selected={date}
-            captionLayout="dropdown"
+            captionLayout='dropdown'
             onSelect={(date) => {
               setDate(date);
               setOpen(false);

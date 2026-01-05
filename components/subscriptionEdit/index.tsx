@@ -1,6 +1,6 @@
-import { Header } from "@/components/ui/header";
-import { SubscriptionField } from "@/components/createSubscription/CreateField";
-import { Subscription } from "@/lib/type";
+import { Header } from '@/components/ui/header';
+import { SubscriptionField } from '@/components/createSubscription/CreateField';
+import { Subscription } from '@/lib/type';
 
 export const SubscriptionEditComponent = ({
   subscription,
@@ -9,7 +9,7 @@ export const SubscriptionEditComponent = ({
 }) => {
   return (
     <div>
-      <Header title="サブスクリプション編集" />
+      <Header title='サブスクリプション編集' />
       <SubscriptionField subscription={subscription} />
     </div>
   );

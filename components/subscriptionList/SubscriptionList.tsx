@@ -1,5 +1,5 @@
-import { Subscription } from "@/lib/type";
-import { SubscriptionItem } from "@/components/subscriptionList/SubscriptionItem";
+import { Subscription } from '@/lib/type';
+import { SubscriptionItem } from '@/components/subscriptionList/SubscriptionItem';
 
 export const SubscriptionList = ({
   subscriptions,
@@ -9,7 +9,10 @@ export const SubscriptionList = ({
   return (
     <>
       {subscriptions.map((subscription) => (
-        <SubscriptionItem key={subscription.id} subscription={subscription} />
+        <SubscriptionItem
+          key={subscription.id}
+          subscription={subscription}
+        />
       ))}
     </>
   );

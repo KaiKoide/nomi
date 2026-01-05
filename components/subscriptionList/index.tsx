@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
-import { Header } from "@/components/ui/header";
-import { TabsManagement } from "./TabsManagement";
-import { Subscription } from "@/lib/type";
+import { Header } from '@/components/ui/header';
+import { TabsManagement } from './TabsManagement';
+import { Subscription } from '@/lib/type';
 
 export const SubscriptionListComponent = ({
   subscriptionList,
@@ -14,12 +14,12 @@ export const SubscriptionListComponent = ({
   const router = useRouter();
 
   const handleCategoryManagement = () => {
-    return router.push("/categoryList");
+    return router.push('/categoryList');
   };
   return (
-    <div className="flex flex-col items-center h-full w-full">
+    <div className='flex flex-col items-center h-full w-full'>
       <Header
-        title="サブスクリプション一覧"
+        title='サブスクリプション一覧'
         isEdit={true}
         onEdit={handleCategoryManagement}
       />

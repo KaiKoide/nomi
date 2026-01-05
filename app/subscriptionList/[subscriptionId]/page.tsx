@@ -1,15 +1,16 @@
-"use client";
+'use client';
 
-import { useParams } from "next/navigation";
+import { useParams } from 'next/navigation';
 
-import { Subscriptions } from "@/components/subscriptions";
-import { subscriptionList } from "@/lib/mockData/subscriptionList";
+import { Subscriptions } from '@/components/subscriptions';
+import { subscriptionList } from '@/lib/mockData/subscriptionList';
 
 export default function SubscriptionDetails() {
   const params = useParams();
 
   const subscription = subscriptionList.find(
-    (subscription) => subscription.id === Number(params.subscriptionId)
+    (subscription) =>
+      subscription.id === Number(params.subscriptionId)
   );
 
   if (!subscription) {
