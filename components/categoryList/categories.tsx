@@ -2,12 +2,12 @@
 
 import { ChevronRight } from 'lucide-react';
 
+import { DrawerComponent } from '@/components/categoryList/DrawerComponent';
 import {
   Item,
   ItemContent,
   ItemHeader,
 } from '@/components/ui/item';
-import { DrawerComponent } from './drawerComponent';
 
 export const Categories = () => {
   const categories = [

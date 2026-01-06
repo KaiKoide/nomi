@@ -1,7 +1,7 @@
 'use client';
 
-import * as React from 'react';
 import { CalendarDays } from 'lucide-react';
+import * as React from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
@@ -12,11 +12,11 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 
-export function DatePicker({
+const DatePicker = ({
   nextPaymentDate,
 }: {
   nextPaymentDate: string | undefined;
-}) {
+}) => {
   const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState<Date | undefined>(
     nextPaymentDate ? new Date(nextPaymentDate) : undefined
@@ -74,4 +74,6 @@ export function DatePicker({
       </Popover>
     </div>
   );
-}
+};
+
+export default DatePicker;

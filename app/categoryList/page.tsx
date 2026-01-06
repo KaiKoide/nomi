@@ -1,5 +1,7 @@
 import { CategoryListComponent } from '@/components/categoryList';
 
-export default function CategoryList() {
+const CategoryList = () => {
   return <CategoryListComponent />;
-}
+};
+
+export default CategoryList;

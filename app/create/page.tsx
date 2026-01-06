@@ -1,5 +1,7 @@
 import { CreateSubscriptionComponent } from '@/components/createSubscription';
 
-export default function CreateSubscription() {
+const CreateSubscription = () => {
   return <CreateSubscriptionComponent />;
-}
+};
+
+export default CreateSubscription;

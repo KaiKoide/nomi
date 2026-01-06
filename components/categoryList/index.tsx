@@ -1,5 +1,5 @@
+import { Categories } from '@/components/categoryList/Categories';
 import { Header } from '@/components/ui/header';
-import { Categories } from '@/components/categoryList/categories';
 
 export const CategoryListComponent = () => {
   return (
