@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 
-const DatePicker = ({
+export const DatePicker = ({
   nextPaymentDate,
 }: {
   nextPaymentDate: string | undefined;
@@ -75,5 +75,3 @@ const DatePicker = ({
     </div>
   );
 };
-
-export default DatePicker;
