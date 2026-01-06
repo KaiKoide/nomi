@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import { ListPlus, MoveLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from './button';
@@ -28,14 +29,15 @@ export const Header = ({
         className='cursor-pointer'
       />
       <h1 className='font-bold'>{title}</h1>
-      {isEdit && (
-        <Button
-          onClick={onEdit}
-          className='rounded-full w-10 h-10 bg-theme-light-pink'
-        >
-          <ListPlus className='size-5 text-theme-dark' />
-        </Button>
-      )}
+      <Button
+        onClick={onEdit}
+        className={cn(
+          'rounded-full w-10 h-10 bg-theme-light-pink',
+          !isEdit && 'invisible'
+        )}
+      >
+        <ListPlus className='size-5 text-theme-dark' />
+      </Button>
     </div>
   );
 };
