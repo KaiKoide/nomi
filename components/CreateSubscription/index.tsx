@@ -1,5 +1,5 @@
+import { SubscriptionField } from '@/components/CreateSubscription/CreateField';
 import { Header } from '@/components/ui/header';
-import { SubscriptionField } from '@/components/createSubscription/CreateField';
 
 export const CreateSubscriptionComponent = () => {
   return (

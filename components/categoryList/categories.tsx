@@ -2,7 +2,7 @@
 
 import { ChevronRight } from 'lucide-react';
 
-import { DrawerComponent } from '@/components/categoryList/DrawerComponent';
+import { DrawerComponent } from '@/components/categoryList/drawerComponent';
 import {
   Item,
   ItemContent,

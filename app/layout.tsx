@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist_Mono, Roboto } from 'next/font/google';
 
 import { ConvexClientProvider } from '@/app/convexClientProvider';
-import './globals.css';
+import '@/app/globals.css';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
