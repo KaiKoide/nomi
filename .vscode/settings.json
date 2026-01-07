@@ -7,6 +7,8 @@
     "source.organizeImports": "explicit"
   },
   "prettier.requireConfig": true,
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
   "files.autoSave": "off",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
