@@ -1,4 +1,4 @@
-import { Categories } from '@/components/categoryList/Categories';
+import { Categories } from '@/components/categoryList/categories';
 import { Header } from '@/components/ui/header';
 
 export const CategoryListComponent = () => {
