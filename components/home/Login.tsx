@@ -1,6 +1,5 @@
 import LoginButton from '@/components/ui/LoginButton';
 import LogoutButton from '@/components/ui/LogoutButton';
-import Profile from '@/components/ui/Profile';
 import { auth0 } from '@/lib/auth0';
 
 export const LoginComponent = async () => {
@@ -12,10 +11,6 @@ export const LoginComponent = async () => {
     <div className='action-card'>
       {user ? (
         <div className='logged-in-section'>
-          <p className='logged-in-message'>
-            ✅ Successfully logged in!
-          </p>
-          <Profile />
           <LogoutButton />
         </div>
       ) : (

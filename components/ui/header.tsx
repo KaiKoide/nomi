@@ -1,34 +1,28 @@
-'use client';
-
 import { cn } from '@/lib/utils';
-import { ListPlus, MoveLeft } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { ListPlus } from 'lucide-react';
 import { Button } from './button';
 
 type HeaderProps = {
-  title: string;
+  title?: string;
   isEdit?: boolean;
   onEdit?: () => void;
 };
 
-export const Header = ({
-  title,
-  isEdit,
-  onEdit,
-}: HeaderProps) => {
-  const router = useRouter();
+export const Header = ({ isEdit, onEdit }: HeaderProps) => {
+  // const router = useRouter();
 
-  const handleBack = () => {
-    return router.back();
-  };
+  // const handleBack = () => {
+  //   return router.back();
+  // };
 
   return (
     <div className='p-5 flex items-center justify-between w-full'>
-      <MoveLeft
+      {/* <LoginComponent /> */}
+      {/* <MoveLeft
         onClick={handleBack}
         className='cursor-pointer'
-      />
-      <h1 className='font-bold'>{title}</h1>
+      /> */}
+      {/* <h1 className='font-bold'>{title}</h1> */}
       <Button
         onClick={onEdit}
         className={cn(
