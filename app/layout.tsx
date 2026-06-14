@@ -1,9 +1,11 @@
+import { MswProvider } from '@/components/providers/MswProvider';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist_Mono, Roboto } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto',
   subsets: ['latin'],
 });
 
@@ -23,11 +25,11 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang='en'>
+    <html lang='ja' className='h-screen'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.variable} ${geistMono.variable} antialiased h-full`}
       >
-        {children}
+        <MswProvider>{children}</MswProvider>
       </body>
     </html>
   );
