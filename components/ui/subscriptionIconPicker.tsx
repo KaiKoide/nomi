@@ -21,6 +21,7 @@ export const SubscriptionIconPicker = ({
           return (
             <Button
               key={name}
+              type='button'
               size='icon'
               onClick={() =>
                 onIconSelect(name as SubscriptionIconName)

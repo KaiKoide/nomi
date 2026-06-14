@@ -1,4 +1,4 @@
-import { DashboardComponent } from '@/components/dashboard';
+import { DashboardComponent } from '@/components/features/dashboard';
 
 const Dashboard = () => {
   return (

@@ -2,13 +2,14 @@
 
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 
 const Home = () => {
   const router = useRouter();
 
-  const handleNavigate = () => {
+  const handleNavigate = useCallback(() => {
     return router.push('/dashboard');
-  };
+  }, [router]);
 
   return (
     <div className='flex min-h-screen items-center justify-center font-sans'>

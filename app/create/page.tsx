@@ -1,4 +1,4 @@
-import { CreateSubscriptionComponent } from '@/components/createSubscription';
+import { CreateSubscriptionComponent } from '@/components/features/createSubscription';
 
 const CreateSubscription = () => {
   return <CreateSubscriptionComponent />;

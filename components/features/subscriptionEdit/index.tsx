@@ -1,5 +1,5 @@
 import { Header } from '@/components/ui/header';
-import { SubscriptionField } from '@/components/createSubscription/CreateField';
+import { SubscriptionField } from '@/components/features/createSubscription/CreateField';
 import { Subscription } from '@/lib/type';
 
 export const SubscriptionEditComponent = ({

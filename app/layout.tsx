@@ -1,3 +1,4 @@
+import { MswProvider } from '@/components/providers/MswProvider';
 import type { Metadata } from 'next';
 import { Geist_Mono, Roboto } from 'next/font/google';
 import './globals.css';
@@ -24,11 +25,11 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang='en' className='h-screen'>
+    <html lang='ja' className='h-screen'>
       <body
         className={`${roboto.variable} ${geistMono.variable} antialiased h-full`}
       >
-        {children}
+        <MswProvider>{children}</MswProvider>
       </body>
     </html>
   );

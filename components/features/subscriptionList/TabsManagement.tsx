@@ -1,4 +1,4 @@
-import { SubscriptionList } from '@/components/subscriptionList/SubscriptionList';
+import { SubscriptionList } from '@/components/features/subscriptionList/SubscriptionList';
 import {
   Tabs,
   TabsContent,

@@ -1,8 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-import { Subscription } from '@/lib/type';
-import { subscriptionIcons } from '@/lib/icons';
 import {
   Item,
   ItemContent,
@@ -11,6 +9,9 @@ import {
   ItemMedia,
   ItemTitle,
 } from '@/components/ui/item';
+import { subscriptionIcons } from '@/lib/icons';
+import { Subscription } from '@/lib/type';
+import { useCallback } from 'react';
 
 export const SubscriptionItem = ({
   subscription,
@@ -24,11 +25,11 @@ export const SubscriptionItem = ({
       subscription.icon as keyof typeof subscriptionIcons
     ]?.icon;
 
-  const handleSubscriptionDetail = () => {
+  const handleSubscriptionDetail = useCallback(() => {
     return router.push(
       `subscriptionList/${subscription.id}`
     );
-  };
+  }, [router, subscription.id]);
 
   return (
     <Item

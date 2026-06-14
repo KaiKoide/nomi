@@ -1,4 +1,4 @@
-import { CategoryListComponent } from '@/components/categoryList';
+import { CategoryListComponent } from '@/components/features/categoryList';
 
 const CategoryList = () => {
   return <CategoryListComponent />;

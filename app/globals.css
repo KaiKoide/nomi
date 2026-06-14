@@ -128,6 +128,6 @@
   body {
     @apply bg-background text-foreground;
 
-    color: #fff;
+    color: var(--foreground);
   }
 }

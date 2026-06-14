@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { Header } from '@/components/ui/header';
-import { DetailComponent } from '@/components/subscriptions/Detail';
+import { DetailComponent } from '@/components/features/subscriptions/Detail';
 import { Subscription } from '@/lib/type';
 
 export const Subscriptions = ({

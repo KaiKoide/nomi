@@ -2,16 +2,20 @@
 
 import { useParams } from 'next/navigation';
 
-import { Subscriptions } from '@/components/subscriptions';
-import { subscriptionList } from '@/lib/mockData/subscriptionList';
+import { Subscriptions } from '@/components/features/subscriptions';
+import { useSubscription } from '@/hooks/useSubscription';
 
 const SubscriptionDetails = () => {
   const params = useParams();
+  const id = Array.isArray(params.subscriptionId)
+    ? params.subscriptionId[0]
+    : params.subscriptionId;
 
-  const subscription = subscriptionList.find(
-    (subscription) =>
-      subscription.id === Number(params.subscriptionId)
+  const { data: subscription, loading } = useSubscription(
+    id as string
   );
+
+  if (loading) return <div>Loading...</div>;
 
   if (!subscription) {
     return <div>Subscription not found</div>;

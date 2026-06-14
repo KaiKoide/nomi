@@ -1,5 +1,5 @@
 import { Subscription } from '@/lib/type';
-import { SubscriptionItem } from '@/components/subscriptionList/SubscriptionItem';
+import { SubscriptionItem } from '@/components/features/subscriptionList/SubscriptionItem';
 
 export const SubscriptionList = ({
   subscriptions,

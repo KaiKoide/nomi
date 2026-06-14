@@ -3,9 +3,10 @@
 import { ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-import { SubscriptionList } from '@/components/subscriptionList/SubscriptionList';
+import { SubscriptionList } from '@/components/features/subscriptionList/SubscriptionList';
 import { getFilteredSubscriptions } from '@/lib/subscription';
 import { Subscription } from '@/lib/type';
+import { useCallback } from 'react';
 
 export const PaymentList = ({
   subscriptionList,
@@ -14,9 +15,9 @@ export const PaymentList = ({
 }) => {
   const router = useRouter();
 
-  const handleAddSubscription = () => {
+  const handleAddSubscription = useCallback(() => {
     return router.push('/subscriptionList');
-  };
+  }, [router]);
 
   return (
     <div>

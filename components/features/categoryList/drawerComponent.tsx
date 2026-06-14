@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { AddButton } from '@/components/ui/addButton';
 import { Button } from '@/components/ui/button';
@@ -36,8 +36,13 @@ export const DrawerComponent = ({
   categoryName,
 }: DrawerComponentProps) => {
   const [name, setName] = useState(categoryName);
-  const title =
-    mode === 'edit' ? 'カテゴリを編集' : 'カテゴリを追加';
+  const title = useMemo(() => {
+    if (mode === 'edit') {
+      return 'カテゴリを編集';
+    } else {
+      return 'カテゴリを追加';
+    }
+  }, [mode]);
 
   return (
     <Drawer>

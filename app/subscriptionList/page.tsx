@@ -1,12 +1,7 @@
-import { SubscriptionListComponent } from '@/components/subscriptionList';
-import { subscriptionList } from '@/lib/mockData/subscriptionList';
+import { SubscriptionListComponent } from '@/components/features/subscriptionList';
 
 const SubscriptionList = () => {
-  return (
-    <SubscriptionListComponent
-      subscriptionList={subscriptionList}
-    />
-  );
+  return <SubscriptionListComponent />;
 };
 
 export default SubscriptionList;
